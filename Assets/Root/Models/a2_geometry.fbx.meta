@@ -1,0 +1,166 @@
+fileFormatVersion: 2
+guid: 76c761b733879d64d8e8383bd68f37d0
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Corner45Inside
+    100004: Corner45InsideInv
+    100006: Corner45Outside
+    100008: Corner45OutsideInv
+    100010: Cube
+    100012: Slab
+    100014: SlabChamfer
+    100016: Slope45
+    100018: Slope45Inv
+    100020: Sphere8Segment
+    100022: Stub
+    100024: Stub2
+    100026: StubChamfer80
+    100028: StubChamfer90
+    100030: TileIndent
+    400000: //RootNode
+    400002: Corner45Inside
+    400004: Corner45InsideInv
+    400006: Corner45Outside
+    400008: Corner45OutsideInv
+    400010: Cube
+    400012: Slab
+    400014: SlabChamfer
+    400016: Slope45
+    400018: Slope45Inv
+    400020: Sphere8Segment
+    400022: Stub
+    400024: Stub2
+    400026: StubChamfer80
+    400028: StubChamfer90
+    400030: TileIndent
+    2100000: Material.001
+    2100002: Material.002
+    2300000: Corner45Inside
+    2300002: Corner45InsideInv
+    2300004: Corner45Outside
+    2300006: Corner45OutsideInv
+    2300008: Cube
+    2300010: Slab
+    2300012: SlabChamfer
+    2300014: Slope45
+    2300016: Slope45Inv
+    2300018: Sphere8Segment
+    2300020: Stub
+    2300022: Stub2
+    2300024: StubChamfer80
+    2300026: StubChamfer90
+    2300028: TileIndent
+    3300000: Corner45Inside
+    3300002: Corner45InsideInv
+    3300004: Corner45Outside
+    3300006: Corner45OutsideInv
+    3300008: Cube
+    3300010: Slab
+    3300012: SlabChamfer
+    3300014: Slope45
+    3300016: Slope45Inv
+    3300018: Sphere8Segment
+    3300020: Stub
+    3300022: Stub2
+    3300024: StubChamfer80
+    3300026: StubChamfer90
+    3300028: TileIndent
+    4300000: Corner45Outside
+    4300002: Slope45
+    4300004: Corner45Inside
+    4300006: Cube
+    4300008: Stub
+    4300010: TileIndent
+    4300012: StubChamfer90
+    4300014: StubChamfer80
+    4300016: Stub2
+    4300018: Slab
+    4300020: SlabChamfer
+    4300022: Slope45Inv
+    4300024: Corner45OutsideInv
+    4300026: Corner45InsideInv
+    4300028: Sphere8Segment
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
