@@ -1,7 +1,11 @@
 /* Script to keep information for the creature that the script is attached to.
+ * Can be applied to any creature. 
+ * Information includes creature name, creature level, creature catch chance, and creature pool size.
+ * Creatures size changes based on level, the higher the level (randomized) mulitply by decided multiplier.
+ * Scale multiplier is adjustable in case for any scene size changes, etc
  * 
  * Magdalena Szlapczynski
- * LAST MODIFIED: December 4, 2024
+ * LAST MODIFIED: December 5, 2024
  */
 
 using System.Collections;
@@ -11,15 +15,14 @@ using UnityEngine;
 
 public class CreatureData : MonoBehaviour
 {
-
     [SerializeField, Tooltip("From 1 to 10")] public float CatchChance; //catch chance each time player collides with creature
     [SerializeField] public float ScaleMultiplier; //the scale amount that gets multiplied by creature level
 
-    public string CreatureName; 
-    public int level; //creatures level
+    public string CreatureName; //name of the creature
+    protected int level; //creatures level
+    public TextMeshProUGUI textMeshPro; //for the UI texture above the creatures
 
-    public TextMeshProUGUI textMeshPro; //for the UI texture
-    private void Start() //starts this before anything else
+    private void Start() 
     {
         level = Random.Range(1, 50); //setting a random level for the creature
 
