@@ -30,6 +30,10 @@ public class PlayerCollision : MonoBehaviour
 
                 other.gameObject.GetComponent<ReturnToPool>().Pool.Release(other.gameObject);
                 scoreScript.OnCreatureCaught(other.gameObject);
+
+                
+
+
             }
             else
             { //unsuccessful catch

@@ -22,6 +22,8 @@ public class CreaturePool : MonoBehaviour
     public int poolSize; //maximum size of the pool
     public int spawnDelay = 0;
 
+    public GameObject trophy;
+
     private ObjectPool<GameObject> creaturePool; //managing gameobject instances
 
     void Start()
@@ -46,13 +48,19 @@ public class CreaturePool : MonoBehaviour
         GameObject creature = Instantiate(creaturePrefab, GetSpawnPosition(), Quaternion.identity);
         creature.SetActive(false);
         creature.GetComponent<ReturnToPool>().Pool = creaturePool;
+
+
         return creature;
     }
 
     private void SpawnCreature(GameObject creature) //taken from pool, activates object
     {
         creature.SetActive(true); //activate when the creatue is retrieved
-        creature.transform.position = GetSpawnPosition();
+
+        creature.GetComponent<CreatureData>().SetLevel(); //set a new level each time a creature spawns
+
+        creature.transform.position = GetSpawnPosition(); //set random spawn position within the zone boundary
+
         creature.transform.SetParent(null); //to stop creature from being a child to the zone parent
     }
 
@@ -85,6 +93,7 @@ public class CreaturePool : MonoBehaviour
 
     private void RespawnCreature()
     {
+        trophy.SetActive(true);
         StartCoroutine(Wait());
     }
     IEnumerator Wait()

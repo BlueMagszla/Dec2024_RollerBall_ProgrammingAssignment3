@@ -23,8 +23,12 @@ public class CreatureData : MonoBehaviour
     protected int level; //creatures level
     public TMP_Text textMeshPro; //for the UI texture above the creatures
 
-    public void Start() 
+    [SerializeField]public int baseScore; //the base score of the specific creature 
+
+    public void SetLevel() 
     {
+        
+
         level = Random.Range(1, 50); //setting a random level for the creature
 
         //transforming size of creature based on its level

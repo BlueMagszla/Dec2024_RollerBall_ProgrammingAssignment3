@@ -46,6 +46,7 @@ public class ScoreScript : MonoBehaviour
     {
         
         string creatureType = creature.GetComponent<CreatureData>().creatureName; //get the creature's name
+        int creatureValue = creature.GetComponent<CreatureData>().baseScore; //get the creature's base score (different creatures are worth different scores)
 
         if (creatureType == currentComboType) //if the creature's name matches the current combo type
         {
@@ -54,13 +55,13 @@ public class ScoreScript : MonoBehaviour
         else //if it does not match, change to new creature type and reset combo
         {
             currentComboType = creatureType;
-            comboCount = 1;
+            comboCount = 0;
         }
 
         timer = comboTimer; //reset the timer every time the player makes the same kind of catch
 
         scoreBonus = comboCount * 10; //multiplier for score bonus
-        playerScore = playerScore + scoreBonus; //add combo 
+        playerScore = playerScore + scoreBonus + creatureValue; //add combo 
 
         Debug.Log("Combo is: " + comboCount + (" and the score is: " + playerScore));
 

@@ -981,8 +981,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CatchChance: 1
   ScaleMultiplier: 0.05
-  creatureName: 
+  creatureName: Snorlax
   textMeshPro: {fileID: 5590065636865169673}
+  baseScore: 15
 --- !u!65 &2319463224011544612
 BoxCollider:
   m_ObjectHideFlags: 0
