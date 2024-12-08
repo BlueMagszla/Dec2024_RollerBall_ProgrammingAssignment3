@@ -11,6 +11,12 @@ using static Const;
 
 public class PlayerCollision : MonoBehaviour
 {
+    private ScoreScript scoreScript;
+
+    private void Start()
+    {
+        scoreScript = GetComponent<ScoreScript>();
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag.Equals("Creature"))
@@ -22,8 +28,8 @@ public class PlayerCollision : MonoBehaviour
             if (catchRoll >= other.gameObject.GetComponent<CreatureData>().CatchChance)
             { //successful catch
 
-                Destroy(other.gameObject);
-
+                other.gameObject.GetComponent<ReturnToPool>().Pool.Release(other.gameObject);
+                scoreScript.OnCreatureCaught(other.gameObject);
             }
             else
             { //unsuccessful catch

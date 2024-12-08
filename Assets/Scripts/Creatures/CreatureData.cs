@@ -19,11 +19,9 @@ public class CreatureData : MonoBehaviour
     [SerializeField, Tooltip("From 1 to 10")] public float CatchChance; //catch chance each time player collides with creature
     [SerializeField] public float ScaleMultiplier; //the scale amount that gets multiplied by creature level
 
-    public string CreatureName; //name of the creature
+    public string creatureName; //name of the creature
     protected int level; //creatures level
     public TMP_Text textMeshPro; //for the UI texture above the creatures
-
-    public CreaturePool pool;
 
     public void Start() 
     {
@@ -35,10 +33,5 @@ public class CreatureData : MonoBehaviour
         textMeshPro.text = "Level " + level;
 
     } //end of start()
-
-    public void OnDestroy()
-    {
-        pool.PositionCreature(); //spawns a new creature each time upon destruction
-    }
 
 } //end of class

@@ -1,6 +1,5 @@
 /* Script for returning to pool 
  * 
- * Sourced from Jeffrey Gauvin's lecture material.
  * 
  * Magdalena Szlapczynski
  * LAST MODIFIED: December 7, 2024
@@ -19,7 +18,7 @@ public class ReturnToPool : MonoBehaviour
     {
         GetComponent<PoolableObject>().ReturnHandler = OnReturnToPool; //reference to poolable object code
     }
-    private void OnReturnToPool()
+    public void OnReturnToPool()
     {
         Pool.Release(gameObject); //release back to the pool
     }
