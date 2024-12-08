@@ -1,6 +1,7 @@
 /* Script to keep information for the creature that the script is attached to.
- * Can be applied to any creature. 
+ * Can be attached to any creature. 
  * Information includes creature name, creature level, creature catch chance, and creature pool size.
+ * Information must be set within the Unity editor. Ideally prefab it if you want to re-use the creature.
  * Creatures size changes based on level, the higher the level (randomized) mulitply by decided multiplier.
  * Scale multiplier is adjustable in case for any scene size changes, etc
  * 
@@ -20,9 +21,11 @@ public class CreatureData : MonoBehaviour
 
     public string CreatureName; //name of the creature
     protected int level; //creatures level
-    public TextMeshProUGUI textMeshPro; //for the UI texture above the creatures
+    public TMP_Text textMeshPro; //for the UI texture above the creatures
 
-    private void Start() 
+    public CreaturePool pool;
+
+    public void Start() 
     {
         level = Random.Range(1, 50); //setting a random level for the creature
 
@@ -32,5 +35,10 @@ public class CreatureData : MonoBehaviour
         textMeshPro.text = "Level " + level;
 
     } //end of start()
+
+    public void OnDestroy()
+    {
+        pool.PositionCreature(); //spawns a new creature each time upon destruction
+    }
 
 } //end of class
