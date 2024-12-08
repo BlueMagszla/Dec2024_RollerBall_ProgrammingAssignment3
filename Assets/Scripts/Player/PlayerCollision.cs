@@ -13,6 +13,8 @@ public class PlayerCollision : MonoBehaviour
 {
     private ScoreScript scoreScript;
 
+    public GameObject damager; //damage volume to activate and hurt the player
+
     private void Start()
     {
         scoreScript = GetComponent<ScoreScript>();
@@ -31,9 +33,6 @@ public class PlayerCollision : MonoBehaviour
                 other.gameObject.GetComponent<ReturnToPool>().Pool.Release(other.gameObject);
                 scoreScript.OnCreatureCaught(other.gameObject);
 
-                
-
-
             }
             else
             { //unsuccessful catch
@@ -41,7 +40,10 @@ public class PlayerCollision : MonoBehaviour
 
                 Vector3 impulse = ((this.transform.position - other.transform.position).normalized * 15f); //how far the player is thrown in opposite direction
                 impulse.y = 5; //how hard player gets thrown upwards
-                GetComponent<Rigidbody>().AddForce(impulse, ForceMode.Impulse);
+                GetComponent<Rigidbody>().AddForce(impulse, ForceMode.Impulse); //push back from creature
+
+                damager.GetComponent<DamageVolume>().TryDamage(gameObject);
+            
 
             }
 

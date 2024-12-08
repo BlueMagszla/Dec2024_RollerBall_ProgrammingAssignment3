@@ -15,11 +15,11 @@ public class DamageVolume : MonoBehaviour, IDamager<int>
 
     public event IDamageEvent<int> OnDamageCallback;
 
-    protected virtual bool TryDamage(GameObject target)
+    public virtual bool TryDamage(GameObject target)
     {
         var targetIsNotSelf = target.transform.root != this.transform.root;
         var tagIsMatch = GameObjectHelper.MatchTag(target, tags);
-        var canDamage = tagIsMatch && targetIsNotSelf;
+        var canDamage = tagIsMatch;
         if (canDamage)
         {
             // DEAL DAMAGE
@@ -48,6 +48,7 @@ public class DamageVolume : MonoBehaviour, IDamager<int>
     {
         var gameObject = collision.gameObject;
         TryDamage(gameObject);
+        gameObject.GetComponent<BoxCollider>().enabled = false;
     }
 
     protected virtual void OnCollisionStay(Collision collision)
@@ -62,6 +63,7 @@ public class DamageVolume : MonoBehaviour, IDamager<int>
     {
         var gameObject = other.gameObject;
         TryDamage(gameObject);
+        gameObject.GetComponent<BoxCollider>().enabled = false;
     }
 
     protected virtual void OnTriggerStay(Collider other)

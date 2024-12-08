@@ -13,7 +13,7 @@ NavMeshProjectSettings:
     cost: 3
   - name: Zone1
     cost: 1
-  - name: 
+  - name: Zone2
     cost: 1
   - name: 
     cost: 1
