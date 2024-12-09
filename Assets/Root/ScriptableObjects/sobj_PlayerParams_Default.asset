@@ -27,7 +27,7 @@ MonoBehaviour:
   groundingRaycastLength: 0.6
   groundLayers: 0000000008000000
   minIdleVelocity: 2
-  moveSpeed: 10
+  moveSpeed: 20
   jumpForce: 10
   jumpSpeed: 5
   jumpForceVelocityScaler:
@@ -39,9 +39,9 @@ MonoBehaviour:
   jumpForceAngle: 90
   groundPoundDotProductMin: 0.2
   groundPoundForce: 30
-  maxDashChargeSeconds: 2
+  maxDashChargeSeconds: 5
   dashMinDuration: 0.25
-  dashSpeed: 30
+  dashSpeed: 50
   dashCurve:
     serializedVersion: 2
     m_Curve:

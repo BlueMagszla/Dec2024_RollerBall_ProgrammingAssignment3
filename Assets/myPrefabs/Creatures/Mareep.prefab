@@ -949,6 +949,7 @@ GameObject:
   - component: {fileID: 3342334378350284209}
   - component: {fileID: 8405537882900431058}
   - component: {fileID: 3808694715145381893}
+  - component: {fileID: 3403302155453423625}
   m_Layer: 5
   m_Name: BaseText
   m_TagString: Untagged
@@ -1039,6 +1040,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &3403302155453423625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4850981818399337649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b65eebbeea4b3f944b7df5f10b55c2a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4871044176956797254
 GameObject:
   m_ObjectHideFlags: 0
@@ -2230,13 +2243,13 @@ GameObject:
   - component: {fileID: 7525782937347999445}
   - component: {fileID: 3882888670865580951}
   - component: {fileID: 1609573230667448866}
-  - component: {fileID: 7961614934359099546}
   - component: {fileID: 1462288989258293487}
   - component: {fileID: 1727664403097899107}
   - component: {fileID: 3601732267149263202}
   - component: {fileID: 6877912553244568899}
   - component: {fileID: 3035867189806067880}
   - component: {fileID: 2060785970300451470}
+  - component: {fileID: 6168168844049068305}
   m_Layer: 0
   m_Name: Mareep
   m_TagString: Creature
@@ -2252,9 +2265,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8728043280372090194}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -62.199997, y: -0.5, z: 121.6}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 2.17269, y: 2.17269, z: 2.17269}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8526307303590202015}
@@ -2300,7 +2313,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 0.1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -2308,19 +2321,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &7961614934359099546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8728043280372090194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d96cc62d313e5f4d929f8e39605a357, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agent: {fileID: 1609573230667448866}
 --- !u!114 &1462288989258293487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2337,6 +2337,7 @@ MonoBehaviour:
   ScaleMultiplier: 0.05
   creatureName: Mareep
   textMeshPro: {fileID: 2692481283700925750}
+  walkableArea: {fileID: 0}
   baseScore: 5
 --- !u!65 &1727664403097899107
 BoxCollider:
@@ -2433,6 +2434,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6168168844049068305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8728043280372090194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d178f34d90097943b59ca41787e2a62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 1
 --- !u!1 &8739019150941659721
 GameObject:
   m_ObjectHideFlags: 0

@@ -63,7 +63,7 @@ public class DamageVolume : MonoBehaviour, IDamager<int>
     {
         var gameObject = other.gameObject;
         TryDamage(gameObject);
-        gameObject.GetComponent<BoxCollider>().enabled = false;
+       
     }
 
     protected virtual void OnTriggerStay(Collider other)

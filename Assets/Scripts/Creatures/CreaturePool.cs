@@ -41,6 +41,12 @@ public class CreaturePool : MonoBehaviour
         {
             creaturePool.Get();
         }
+
+    }
+
+    private void Update()
+    {
+        GetComponent<BoxCollider>().enabled = true; //to make sure the box collider stays activated, Unity bugs out a bit.
     }
 
     private GameObject CreateCreature() //defines what happens when a object is created
@@ -48,7 +54,7 @@ public class CreaturePool : MonoBehaviour
         GameObject creature = Instantiate(creaturePrefab, GetSpawnPosition(), Quaternion.identity);
         creature.SetActive(false);
         creature.GetComponent<ReturnToPool>().Pool = creaturePool;
-
+        creature.GetComponent<CreatureData>().walkableArea = GetComponent<BoxCollider>();
 
         return creature;
     }

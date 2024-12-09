@@ -38,6 +38,7 @@ public class ScoreScript : MonoBehaviour
                 //resetting the combo if the timer runs out
                 currentComboType = null; 
                 comboCount = 0;
+                textMeshPro.color = Color.white;
             }
         }
 
@@ -51,11 +52,13 @@ public class ScoreScript : MonoBehaviour
         if (creatureType == currentComboType) //if the creature's name matches the current combo type
         {
             comboCount++; //add one to the counter 
+            textMeshPro.color = Color.blue;
         }
         else //if it does not match, change to new creature type and reset combo
         {
             currentComboType = creatureType;
             comboCount = 0;
+            textMeshPro.color = Color.white;
         }
 
         timer = comboTimer; //reset the timer every time the player makes the same kind of catch

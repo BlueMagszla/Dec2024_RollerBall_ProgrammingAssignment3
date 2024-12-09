@@ -919,6 +919,7 @@ GameObject:
   - component: {fileID: 6772149552926877295}
   - component: {fileID: 343911451773634178}
   - component: {fileID: 3225531291866095095}
+  - component: {fileID: 2231614713393180840}
   m_Layer: 0
   m_Name: Snorlax
   m_TagString: Creature
@@ -983,6 +984,7 @@ MonoBehaviour:
   ScaleMultiplier: 0.05
   creatureName: Snorlax
   textMeshPro: {fileID: 5590065636865169673}
+  walkableArea: {fileID: 0}
   baseScore: 15
 --- !u!65 &2319463224011544612
 BoxCollider:
@@ -1069,7 +1071,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 0.1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -1101,6 +1103,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64bc69bc510db7b4ca4388ff7c1d8482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2231614713393180840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3881049830797798227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d178f34d90097943b59ca41787e2a62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 1
 --- !u!1 &4115268075956290098
 GameObject:
   m_ObjectHideFlags: 0
@@ -1864,6 +1879,7 @@ GameObject:
   - component: {fileID: 9037953248777173542}
   - component: {fileID: 5591146322433280567}
   - component: {fileID: 1490956831385754540}
+  - component: {fileID: 8824116470886807722}
   m_Layer: 5
   m_Name: BaseText
   m_TagString: Untagged
@@ -1954,6 +1970,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &8824116470886807722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7396972704688315902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b65eebbeea4b3f944b7df5f10b55c2a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7631464890191841405
 GameObject:
   m_ObjectHideFlags: 0

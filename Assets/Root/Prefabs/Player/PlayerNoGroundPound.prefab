@@ -309,6 +309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damager: {fileID: 4227430027272989436}
+  particlePrefab: {fileID: 0}
 --- !u!114 &3499167705092165665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -444,7 +445,6 @@ GameObject:
   - component: {fileID: 3112285724664326704}
   - component: {fileID: 7122597252698185000}
   - component: {fileID: 8527217213473604976}
-  - component: {fileID: 4984726452719209756}
   - component: {fileID: 3230140470280394763}
   m_Layer: 0
   m_Name: Penalty
@@ -539,23 +539,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4984726452719209756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4227430027272989436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 710293db8851eb54c965ec75d68dc3d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tags:
-  - Untagged
-  - Player
-  damage: 1
-  damageOnStay: 1
 --- !u!114 &3230140470280394763
 MonoBehaviour:
   m_ObjectHideFlags: 0

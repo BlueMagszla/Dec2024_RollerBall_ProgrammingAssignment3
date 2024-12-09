@@ -15,6 +15,8 @@ public class PlayerCollision : MonoBehaviour
 
     public GameObject damager; //damage volume to activate and hurt the player
 
+    public GameObject particlePrefab;
+
     private void Start()
     {
         scoreScript = GetComponent<ScoreScript>();
@@ -32,6 +34,9 @@ public class PlayerCollision : MonoBehaviour
 
                 other.gameObject.GetComponent<ReturnToPool>().Pool.Release(other.gameObject);
                 scoreScript.OnCreatureCaught(other.gameObject);
+                
+                GameObject particleInstance = Instantiate(particlePrefab, transform.position, Quaternion.identity); //make the particle prefab for visuals
+                Destroy(particleInstance, 1f); //destroy the particle effect
 
             }
             else
@@ -42,7 +47,7 @@ public class PlayerCollision : MonoBehaviour
                 impulse.y = 5; //how hard player gets thrown upwards
                 GetComponent<Rigidbody>().AddForce(impulse, ForceMode.Impulse); //push back from creature
 
-                damager.GetComponent<DamageVolume>().TryDamage(gameObject);
+                damager.GetComponent<DamageVolume2>().TryDamage(gameObject);
             
 
             }
