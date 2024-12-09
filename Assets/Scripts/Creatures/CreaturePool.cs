@@ -92,7 +92,7 @@ public class CreaturePool : MonoBehaviour
         //random coordinates between the center and boundaries of the collision
         float x = Random.Range(boundCenter.x - boundSize.x / 2, boundCenter.x + boundSize.x / 2);
         float z = Random.Range(boundCenter.z - boundSize.z / 2, boundCenter.z + boundSize.z / 2);
-        Vector3 randomPosition = new Vector3(x, 0f, z); //creating vector based off of randomly generated coordinates
+        Vector3 randomPosition = new Vector3(x, boundCenter.y + 5, z); //creating vector based off of randomly generated coordinates
 
         return randomPosition;
     }
