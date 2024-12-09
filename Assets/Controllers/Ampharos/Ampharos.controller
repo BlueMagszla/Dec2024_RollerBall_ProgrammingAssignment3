@@ -32,8 +32,8 @@ AnimatorStateMachine:
   m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
-    m_State: {fileID: 7295832703427731383}
-    m_Position: {x: 200, y: 0, z: 0}
+    m_State: {fileID: 6257313172956678121}
+    m_Position: {x: 426.43024, y: 55.16266, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -43,15 +43,15 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 7295832703427731383}
---- !u!1102 &7295832703427731383
+  m_DefaultState: {fileID: 6257313172956678121}
+--- !u!1102 &6257313172956678121
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Idle_ampharos
+  m_Name: Run_Ampharos
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -64,7 +64,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: d68a160cced57054f8f2b8e90a64f7bb, type: 2}
+  m_Motion: {fileID: 7400000, guid: 9530876d5ba09234dbd20c2ead02e168, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

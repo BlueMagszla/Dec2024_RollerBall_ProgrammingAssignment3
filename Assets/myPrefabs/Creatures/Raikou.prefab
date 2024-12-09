@@ -1864,8 +1864,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.199289, y: 5.015334, z: 4.5454597}
-  m_Center: {x: 0.0017789775, y: 2.5173616, z: 1.4393024}
+  m_Size: {x: 2.73519, y: 5.015334, z: 4.9832964}
+  m_Center: {x: 0.025334148, y: 2.5173616, z: 1.4138689}
 --- !u!195 &2788243487904322667
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1876,7 +1876,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 287145453
   m_Radius: 3
-  m_Speed: 15
+  m_Speed: 20
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -2314,9 +2314,9 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8290782892783832528, guid: 3e6f65c0aaa6d8f468767800ef7cce80, type: 3}
-  - {fileID: 7626191068330388430, guid: 3e6f65c0aaa6d8f468767800ef7cce80, type: 3}
-  - {fileID: 8830196273332348141, guid: 3e6f65c0aaa6d8f468767800ef7cce80, type: 3}
+  - {fileID: 2100000, guid: b64c5a372abd9354885a5a21ef375b35, type: 2}
+  - {fileID: 2100000, guid: 788e0f9dd7f4cd34a9bca7ed69f1a08c, type: 2}
+  - {fileID: 2100000, guid: 3bf7c96cd9b038e429411c11aa799cc2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
