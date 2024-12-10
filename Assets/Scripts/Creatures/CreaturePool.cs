@@ -1,9 +1,10 @@
 /* Script for pooling creatures.
- * Attach to zones and provide which creatures will spawn in editor.
- * You can add multiple for different creatures to spawn in the specific zone.
+ * Attach to zones and provide which creatures will spawn in the editor.
+ * You can add multiple instances of this script for different creatures to spawn in the same zone.
+ * Specifies the trophy (achievement) to activate in the scene.
  * 
  * Magdalena Szlapczynski
- * LAST MODIFIED: December 7, 2024
+ * LAST MODIFIED: December 9, 2024
  */
 
 using System.Collections;
@@ -16,64 +17,52 @@ using UnityEngine.Pool;
 [RequireComponent(typeof(BoxCollider))]
 public class CreaturePool : MonoBehaviour
 {
-    //public static CreaturePool Instance { get; private set; } //ensures there is only one instance
-
     public GameObject creaturePrefab; //creature prefab from assets prefab folder
     public int poolSize; //maximum size of the pool
-    public int spawnDelay = 0;
+    public int spawnDelay = 0; //time in seconds between the creature respawns
 
-    public GameObject trophy;
-
+    public GameObject trophy; //game object in scene to activate
     private ObjectPool<GameObject> creaturePool; //managing gameobject instances
 
     void Start()
     {
         creaturePool = new ObjectPool<GameObject>( //initializing the pool
-            CreateCreature,
+            CreateCreature, //when the creature is first initialized
             SpawnCreature, //when the creature is fetched from the pool
             ReturnCreature, //when the creature is returning to the pool
             DestroyCreature, //when the creature is removed from the pool
-            true, //checking
+            true, 
             poolSize //the maximum size of the pool
             );
 
-        for (int i = 0; i < poolSize; i++)
+        for (int i = 0; i < poolSize; i++) //loop through pool size to spawn all creatures 
         {
-            creaturePool.Get();
+            creaturePool.Get(); //spawns the creature on start 
         }
-
-    }
-
-    private void Update()
-    {
-        GetComponent<BoxCollider>().enabled = true; //to make sure the box collider stays activated, Unity bugs out a bit.
     }
 
     private GameObject CreateCreature() //defines what happens when a object is created
     {
-        GameObject creature = Instantiate(creaturePrefab, GetSpawnPosition(), Quaternion.identity);
-        creature.SetActive(false);
-        creature.GetComponent<ReturnToPool>().Pool = creaturePool;
-        creature.GetComponent<CreatureData>().walkableArea = GetComponent<BoxCollider>();
+        GameObject creature = Instantiate(creaturePrefab, GetSpawnPosition(), Quaternion.identity); //instantiate the creature
+        creature.SetActive(false); //start deactivated
+        creature.GetComponent<ReturnToPool>().Pool = creaturePool; //setting reference
+        creature.GetComponent<CreatureData>().walkableArea = GetComponent<BoxCollider>(); //setting reference
 
-        return creature;
+        return creature; 
     }
 
     private void SpawnCreature(GameObject creature) //taken from pool, activates object
     {
-        creature.SetActive(true); //activate when the creatue is retrieved
-
+        creature.SetActive(true); //activate when the creature is retrieved
         creature.GetComponent<CreatureData>().SetLevel(); //set a new level each time a creature spawns
-
         creature.transform.position = GetSpawnPosition(); //set random spawn position within the zone boundary
-
-        creature.transform.SetParent(null); //to stop creature from being a child to the zone parent
+        creature.transform.SetParent(null); //to stop the creature from being a child to the zone
     }
 
     private void ReturnCreature(GameObject creature) //returned to pool, deactivate object
     {
         creature.SetActive(false); //deactivate creature when returned 
-        RespawnCreature();
+        RespawnCreature(); //respawn
     }
 
     private void DestroyCreature(GameObject creature)
@@ -97,24 +86,20 @@ public class CreaturePool : MonoBehaviour
         return randomPosition;
     }
 
-    private void RespawnCreature()
+    private void RespawnCreature() 
     {
-        trophy.SetActive(true);
-        StartCoroutine(Wait());
+        trophy.SetActive(true); //setting the trophy object active
+        StartCoroutine(Wait()); //delay before spawning
     }
     IEnumerator Wait()
     {
         yield return new WaitForSeconds(spawnDelay); //delays the respawn of the creature
-        creaturePool.Get();
+        creaturePool.Get(); //spawns the creature from pool
     }
 
-    private void OnApplicationQuit()
+    private void OnApplicationQuit() //ensures everything is destroyed
     {
-        while (creaturePool.CountInactive > 0)
-        {
-            GameObject creature = creaturePool.Get();
-            Destroy(creature); //destroy all objects
-        }
+        creaturePool.Clear(); //destroys everything
     }
 
 }

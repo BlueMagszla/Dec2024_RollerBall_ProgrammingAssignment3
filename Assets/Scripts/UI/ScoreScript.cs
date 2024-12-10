@@ -21,7 +21,6 @@ public class ScoreScript : MonoBehaviour
     int scoreBonus = 0; //the current bonus being added
     public string currentComboType; //the current creature for the combo
 
-
     //variables for timer
     public float comboTimer = 5f; //time window for the combo
     private float timer;
@@ -41,7 +40,6 @@ public class ScoreScript : MonoBehaviour
                 textMeshPro.color = Color.white;
             }
         }
-
     }
     public void OnCreatureCaught(GameObject creature)
     {

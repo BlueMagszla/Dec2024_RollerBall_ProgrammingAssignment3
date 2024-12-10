@@ -1704,6 +1704,7 @@ GameObject:
   - component: {fileID: 703503336509104237}
   - component: {fileID: -2629650187744910657}
   - component: {fileID: 6129401435259580720}
+  - component: {fileID: 9090151564461356329}
   m_Layer: 0
   m_Name: Sandile
   m_TagString: Creature
@@ -1902,6 +1903,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 1
+--- !u!114 &9090151564461356329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7336725493757595260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aba0de759629a92438f3d8953260d88f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Pieces: []
+  Materials: []
 --- !u!1 &7552914448124069441
 GameObject:
   m_ObjectHideFlags: 0

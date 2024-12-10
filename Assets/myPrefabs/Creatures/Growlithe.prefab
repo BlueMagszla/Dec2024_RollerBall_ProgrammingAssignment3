@@ -890,6 +890,7 @@ GameObject:
   - component: {fileID: 8015247197682825298}
   - component: {fileID: 7915910453814563802}
   - component: {fileID: 550507978696536953}
+  - component: {fileID: 3500646524122631559}
   m_Layer: 0
   m_Name: Growlithe
   m_TagString: Creature
@@ -1088,6 +1089,26 @@ CapsuleCollider:
   m_Height: 0.6
   m_Direction: 1
   m_Center: {x: 0.0036271217, y: 0.294768, z: -0.2304553}
+--- !u!114 &3500646524122631559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3234116227268493538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aba0de759629a92438f3d8953260d88f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Pieces:
+  - {fileID: 8167977450335806209}
+  Materials:
+  - {fileID: 2100000, guid: 638aac533217dae4c864268fdde7db9d, type: 2}
+  - {fileID: 2100000, guid: 638aac533217dae4c864268fdde7db9d, type: 2}
+  - {fileID: 2100000, guid: 638aac533217dae4c864268fdde7db9d, type: 2}
+  - {fileID: 2100000, guid: 638aac533217dae4c864268fdde7db9d, type: 2}
+  - {fileID: 2100000, guid: 0d150968fa2b6204b8db9a19846a021b, type: 2}
 --- !u!1 &3242513795396907438
 GameObject:
   m_ObjectHideFlags: 0

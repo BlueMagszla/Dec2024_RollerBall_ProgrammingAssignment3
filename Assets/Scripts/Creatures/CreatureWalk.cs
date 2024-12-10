@@ -1,6 +1,9 @@
-
-
-
+/* Script for allowing the creatures to walk.
+ * Calculates points for agents to walk to.
+ * 
+ * Magdalena Szlapczynski
+ * LAST MODIFIED: December 9, 2024
+ */
 
 using System.Collections;
 using System.Collections.Generic;
@@ -19,7 +22,7 @@ public class CreatureWalk : MonoBehaviour
 
     void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
+        agent = GetComponent<NavMeshAgent>(); //getting nav mesh agent
     }
     void Update()
     {       //built in agent functions
@@ -40,18 +43,14 @@ public class CreatureWalk : MonoBehaviour
         //random coordinates between the center and boundaries of the collision
         float x = Random.Range(boundCenter.x - boundSize.x / 2, boundCenter.x + boundSize.x / 2);
         float z = Random.Range(boundCenter.z - boundSize.z / 2, boundCenter.z + boundSize.z / 2);
-        Vector3 randomPosition = new Vector3(x, 0f, z); //creating vector based off of randomly generated coordinates
 
-        Vector3 destinationPoint = randomPosition;
+        Vector3 randomPosition = new Vector3(x, gameObject.transform.position.y, z); //creating vector based off of randomly generated coordinates
+        Vector3 destinationPoint = randomPosition; //setting the destination point of the agent
 
-        NavMeshHit hit;
-        if (NavMesh.SamplePosition(destinationPoint, out hit, range, NavMesh.AllAreas))
+        NavMeshHit hit; 
+        if (NavMesh.SamplePosition(destinationPoint, out hit, range, NavMesh.AllAreas)) //finds a point for agent to go
         {
-            agent.SetDestination(hit.position);
-        }
-
-
-
-
+            agent.SetDestination(hit.position); //set as destination for the nav agent 
+        } //end of if statement
     } //end of function
 }
