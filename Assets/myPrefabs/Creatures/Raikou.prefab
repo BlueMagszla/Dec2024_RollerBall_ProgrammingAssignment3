@@ -1844,7 +1844,7 @@ MonoBehaviour:
   creatureName: Raikou
   textMeshPro: {fileID: 4363950156869304466}
   walkableArea: {fileID: 0}
-  baseScore: 50
+  baseScore: 60
 --- !u!65 &8817445121574900708
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -466,7 +466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54ffd94ee67a7864a8bb795d9fb1b23d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CatchChance: 9
+  CatchChance: 6
   ScaleMultiplier: 0.001
   creatureName: Arceus
   textMeshPro: {fileID: 679833705159716019}
