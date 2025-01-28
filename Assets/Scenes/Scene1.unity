@@ -4565,6 +4565,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 23759377509192548, guid: 61297d46b83d751408cf7aca70cda6d9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 114571617657506402, guid: 61297d46b83d751408cf7aca70cda6d9,
         type: 3}
       propertyPath: camera
@@ -10454,7 +10459,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &919132148556796416
 Animator:
   serializedVersion: 5
